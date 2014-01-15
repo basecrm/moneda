@@ -23,7 +23,7 @@ module Moneda
     end
 
     def parse_response(response)
-      JSON.parse(response)
+      JSON.parse(response)["rates"]
     end
   end
 end
