@@ -19,7 +19,7 @@ module Moneda
     end
 
     def fetch_historical_on(date)
-      HTTParty.get("#{Moneda::API_URL}/historical/#{date}.json?app_id=#{app_id}").body
+      HTTParty.get("#{Moneda::API_URL}/historical/#{date}.json?app_id=#{app_id}&base=#{base_currency}").body
     end
 
     def parse_response(response)
