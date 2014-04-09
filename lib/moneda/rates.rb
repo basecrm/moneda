@@ -31,7 +31,12 @@ module Moneda
     end
 
     def parse_response(response)
-      JSON.parse(response)["rates"]
+      json_response = JSON.parse(response)
+      if json_response["error"]
+        raise Moneda::Error, json_response["message"]
+      else
+        json_response["rates"]
+      end
     end
   end
 end

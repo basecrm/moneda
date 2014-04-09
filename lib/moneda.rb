@@ -1,6 +1,7 @@
 require "moneda/version"
 require "moneda/configuration"
 require "moneda/rates"
+require "moneda/errors"
 
 module Moneda
   API_URL = "http://openexchangerates.org"
