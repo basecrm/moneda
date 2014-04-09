@@ -1,6 +1,6 @@
 # Moneda
 
-TODO: Write a gem description
+Browse exchange rates API
 
 ## Installation
 
@@ -18,7 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure the API
+
+```ruby
+Moneda.configure do |config|
+  config.app_id = 'app-id'
+end
+```
+
+Retrieve exchange rates for a specific `base currency` for a specific `date`
+
+```ruby
+Moneda::Rates.new('AUD').time_series('2011-10-17', '2011-10-17')
+#=> { "2011-10-17" => { "AED"=>3.758833, "AFN"=>49.449889, ... } }
+```
 
 ## Contributing
 
