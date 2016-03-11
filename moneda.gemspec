@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Moneda::VERSION
   spec.authors       = ["Antek Piechnik"]
   spec.email         = ["antek.piechnik@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "API wrapper for openexchangerates.org"
+  spec.description   = "API wrapper for openexchangerates.org"
   spec.homepage      = ""
   spec.license       = "MIT"
 
